@@ -7,9 +7,10 @@ var express = require('express');
 var path = require('path');
 var app = express();
 
-app.listen(3000, () => {
-  console.log('Server is up on 3000')
-})
+var server = app.listen(process.env.PORT || 5000, function () {
+  var port = server.address().port;
+  console.log("Express is working on port " + port);
+});
 
 app.use(express.static('public'));
 
