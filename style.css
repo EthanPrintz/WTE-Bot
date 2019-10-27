@@ -1,0 +1,148 @@
+/* FONT IMPORTS */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,600,700,800,900&display=swap');
+
+/*--------------------------------*/
+/* General Styling */
+html,body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(245, 245, 245);
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+/*--------------------------------*/
+/* Header Styling */
+#pageTitle{
+    font-size: 4vh;
+    color: #559AA1;
+    font-weight: 900;
+    margin-top: 2vh;
+}
+    #pageTitle span{
+        text-decoration: underline;
+        text-decoration-color: #FFCF00;
+    }
+#toolBar{
+    width: 70vw;
+    display: inline-block;
+    font-weight: 600;
+}
+    .selectSection{
+        width: 40%;
+        float: left;
+        color: rgb(129, 129, 129);
+        box-sizing: border-box;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.05), 0 3px 6px rgba(0,0,0,0.1);
+        border-radius: 6px;
+        margin: 2vh 5% 5vh 5%;
+        padding: 0.8vh 0 0.4vh 0;
+        background-color: rgb(224, 224, 224);
+    }
+        .selectOption{
+            display: inline-block;
+            box-sizing: border-box;
+            background-color: rgb(248, 248, 248);
+            margin: 0.6vh;
+            padding: 0.3vh;
+            border-radius: 0.6vh;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.03), 0 3px 6px rgba(0,0,0,0.05);
+            cursor: pointer;
+            transition: 0.2s;
+            user-select: none;
+        }
+            .selectOption:not(.selectedOption):hover{
+                box-shadow: 0 5px 7px rgba(0,0,0,0.06), 0 5px 7px rgba(0,0,0,0.07);
+            }
+            #lengthLine{color: #607D8B}
+            #lengthParagraph{color: #455A64}
+            #lengthPage{color: #37474F}
+            #tempLow{color: #FFA726}
+            #tempModerate{color: #FF7043}
+            #tempExtreme{color: #EF5350}
+            .selectedOption{
+                color: rgb(248, 248, 248)!important;
+                box-shadow: 0 5px 7px rgba(0,0,0,0.09), 0 5px 7px rgba(0,0,0,0.11);
+            }
+                .selectedOption#lengthLine{background-color: #607D8B}
+                .selectedOption#lengthParagraph{background-color: #455A64}
+                .selectedOption#lengthPage{background-color: #37474F}
+                .selectedOption#tempLow{background-color: #FFA726}
+                .selectedOption#tempModerate{background-color: #FF7043}
+                .selectedOption#tempExtreme{background-color: #EF5350}
+            .selectTitle{
+                margin-bottom: 0.4vh;
+            }
+            .optionTitle{
+                float: left;
+                margin: 0.1vh 0.4vh 0 0.4vh;
+            }
+            .icon{
+                width: 2.3vh;
+                height: 2.3 vh;
+                border-radius: 2px;
+                box-sizing: border-box;
+                float: left;
+            }
+/*--------------------------------*/
+/* 'Document' Styling */
+#pageSheet{
+    width: 80vw;
+    min-height: 30vh;
+    display: inline-block;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+    background-color: white;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.05), 0 3px 6px rgba(0,0,0,0.1);
+    font-weight: 600;
+    font-size: 2.2vh;
+    text-align: left;
+    padding: 2vh;
+    box-sizing: border-box;
+    cursor: text;
+}
+    .oldInput{
+        color: rgb(104, 104, 104); 
+    }
+    .generatedInput{
+        text-decoration: underline;
+    }
+    #newInput{
+        outline: none; 
+        display: inline-block;
+        pointer-events: none;
+    }
+        #newInput[placeholder]:empty:before {
+            content: attr(placeholder);
+            color: rgb(77, 77, 77); 
+        }
+        #newInput[placeholder]:not(:empty):after{
+            content: " ";
+            width: 2.1vh;
+            height: 2.1vh;
+            display: inline-block;
+            background-image: url("/icons/submit.svg");
+            background-repeat: no-repeat;
+            background-size: 90%;
+            margin-left: 0.3vh;
+            cursor: pointer;
+            background-position: bottom center;
+            opacity: 0.6;
+            transition: 0.3s;
+            pointer-events: all;
+        }
+            #newInput:hover:after{
+                opacity: 1;
+            }
+#loadingIcon{
+    width: 2.15vh;
+    height: 2.15vh;
+    display: inline-block;
+    background-image: url("/icons/load.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 0.3vh;
+    background-position: center center;
+}
