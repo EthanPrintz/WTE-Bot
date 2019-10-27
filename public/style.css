@@ -9,7 +9,7 @@ html,body{
     background-color: rgb(245, 245, 245);
     width: 100vw;
     height: 100vh;
-    overflow-x: hidden;
+    overflow: hidden;
     font-family: 'Roboto', sans-serif;
     text-align: center;
 }
@@ -90,7 +90,7 @@ html,body{
 /* 'Document' Styling */
 #pageSheet{
     width: 80vw;
-    min-height: 30vh;
+    height: 73vh;
     display: inline-block;
     border-top-left-radius: 14px;
     border-top-right-radius: 14px;
@@ -102,6 +102,7 @@ html,body{
     padding: 2vh;
     box-sizing: border-box;
     cursor: text;
+    overflow-y: scroll;
 }
     .oldInput{
         color: rgb(104, 104, 104); 
