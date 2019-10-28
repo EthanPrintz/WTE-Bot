@@ -147,3 +147,18 @@ html,body{
     margin-left: 0.3vh;
     background-position: center center;
 }
+#about{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(216, 216, 216);
+    color: rgb(153, 153, 153);
+    font-weight: 700;
+    padding: 0.5vh 0.5vh 0.5vh 1vh;
+    border-top-left-radius: 1vh;
+}
+#about a{
+    text-decoration: none;
+    color: rgb(119, 119, 119);
+    font-weight: 900;
+}
